@@ -15,32 +15,29 @@
             <!-- limits -->
             <max_wheel_torque>200</max_wheel_torque>
             <max_wheel_acceleration>10.0</max_wheel_acceleration>
-            <!-- <min_velocity>0.01</min_velocity>
-            <min_linear_velocity>0.01</min_linear_velocity>
-            <min_angular_velocity>0.01</min_angular_velocity> -->
             <max_velocity>5.0</max_velocity>
             <max_linear_velocity>5.0</max_linear_velocity>
             <max_angular_velocity>6.28</max_angular_velocity>
-            <!-- <min_acceleration>0.01</min_acceleration>
-            <min_linear_acceleration>0.01</min_linear_acceleration>
-            <min_angular_acceleration>0.01</min_angular_acceleration> -->
             <max_acceleration>5.0</max_acceleration>
             <max_linear_accelration>5.0</max_linear_accelration>
             <max_angular_acceleration>6.28</max_angular_acceleration>
 
-             <!-- publish tf frames -->
-            <odom_topic>odom</odom_topic>
-            <tf_topic>tf</tf_topic>
+            <!-- publish tf frames -->
+            <command_topic>cmd_vel</command_topic>
+
+            <!-- output -->
             <publish_odom>true</publish_odom>
             <publish_odom_tf>true</publish_odom_tf>
-            <publish_wheel_tf>true</publish_wheel_tf>
-            <frame_id>odom</frame_id>
-            <child_frame_id>base_footprint</child_frame_id>
+            <publish_wheel_tf>false</publish_wheel_tf>
+
+            <odometry_topic>odom</odometry_topic>
+            <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
             <odom_publish_frequency>20</odom_publish_frequency>
         </plugin>
     </gazebo>
 
-    <gazebo>
+    <!-- <gazebo>
         <plugin filename="ignition-gazebo-odometry-publisher-system" name="ignition::gazebo::systems::OdometryPublisher">
             <odom_frame> map</odom_frame>
             <robot_base_frame> base_footprint</robot_base_frame>
@@ -50,6 +47,6 @@
             <gaussian_noise>5.0</gaussian_noise>
             <xyz_offset>0 0 0</xyz_offset>
         </plugin>
-    </gazebo>
+    </gazebo> -->
 
 </robot>
