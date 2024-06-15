@@ -68,7 +68,7 @@ def generate_launch_description():
     
     navigation = IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(
-                get_package_share_directory(package_name),'launch','navigation_launch.launch.py'
+                get_package_share_directory(package_name),'launch','navigation_launch.py'
             )]), launch_arguments={'use_sim_time': 'true',
                                     'map': './src/articubot_one/config/my_map_save.yaml'}.items()
     )
