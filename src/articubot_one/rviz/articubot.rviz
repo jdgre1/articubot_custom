@@ -9,6 +9,7 @@ Panels:
         - /Map1/Topic1
         - /RobotModel1/Description Topic1
         - /Camera1/Topic1
+        - /TF1
         - /TF1/Frames1
         - /Map2
       Splitter Ratio: 0.5
@@ -202,19 +203,61 @@ Visualization Manager:
         Value: true
       Zoom Factor: 1
     - Class: rviz_default_plugins/TF
-      Enabled: false
+      Enabled: true
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        base_footprint:
+          Value: false
+        base_link:
+          Value: false
+        camera_link:
+          Value: false
+        camera_link_optical:
+          Value: false
+        caster_wheel:
+          Value: false
+        chassis:
+          Value: false
+        face_link:
+          Value: false
+        laser_frame:
+          Value: false
+        left_wheel:
+          Value: false
+        map:
+          Value: true
+        odom:
+          Value: true
+        right_wheel:
+          Value: false
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        {}
+        map:
+          odom:
+            base_link:
+              base_footprint:
+                {}
+              chassis:
+                camera_link:
+                  camera_link_optical:
+                    {}
+                caster_wheel:
+                  {}
+                face_link:
+                  {}
+                laser_frame:
+                  {}
+              left_wheel:
+                {}
+              right_wheel:
+                {}
       Update Interval: 0
-      Value: false
+      Value: true
     - Alpha: 0.699999988079071
       Class: rviz_default_plugins/Map
       Color Scheme: costmap
@@ -282,7 +325,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 5.325492858886719
+      Distance: 16.540172576904297
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
