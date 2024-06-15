@@ -32,3 +32,6 @@ ros2 run nav2_util lifecycle_bringup map_server
 ros2 run nav2_util lifecycle_bringup amcl
 
 
+### Nav2 edited
+ros2 launch articubot_one launch_sim.launch.py use_sim_time:=true
+ros2 launch articubot_one online_async_launch.py
