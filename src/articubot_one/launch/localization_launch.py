@@ -25,8 +25,9 @@ from nav2_common.launch import RewrittenYaml
 
 def generate_launch_description():
     # Get the launch directory
-    bringup_dir = get_package_share_directory('articubot_one')
-
+    package_dir = get_package_share_directory('articubot_one')
+    bringup_dir = os.path.join(package_dir, "config/")
+    
     namespace = LaunchConfiguration('namespace')
     map_yaml_file = LaunchConfiguration('map')
     use_sim_time = LaunchConfiguration('use_sim_time')
@@ -64,7 +65,7 @@ def generate_launch_description():
 
         DeclareLaunchArgument(
             'map',
-            default_value=os.path.join(bringup_dir, 'maps', 'turtlebot3_world.yaml'),
+            default_value=os.path.join(bringup_dir, 'maps', 'my_map_save.yaml'),
             description='Full path to map yaml file to load'),
 
         DeclareLaunchArgument(
