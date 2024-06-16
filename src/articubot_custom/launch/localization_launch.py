@@ -25,7 +25,7 @@ from nav2_common.launch import RewrittenYaml
 
 def generate_launch_description():
     # Get the launch directory
-    package_dir = get_package_share_directory('articubot_one')
+    package_dir = get_package_share_directory('articubot_custom')
     bringup_dir = os.path.join(package_dir, "config/")
     
     namespace = LaunchConfiguration('namespace')

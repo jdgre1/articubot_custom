@@ -17,7 +17,7 @@ def generate_launch_description():
     gazebo_worlds_path = '/usr/share/gazebo-11/worlds'  # Adjust based on your Gazebo version and installation path
     world_file_path = os.path.join(gazebo_worlds_path, world_file_name)
 
-    package_name='articubot_one' #<--- CHANGE ME
+    package_name='articubot_custom' #<--- CHANGE ME
 
 
     rsp = IncludeLaunchDescription(
@@ -63,14 +63,14 @@ def generate_launch_description():
 
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-topic', 'robot_description',
-                                   '-entity', 'articubot_one'],
+                                   '-entity', 'articubot_custom'],
                         output='screen')
     
     navigation = IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(
                 get_package_share_directory(package_name),'launch','navigation_launch.py'
             )]), launch_arguments={'use_sim_time': 'true',
-                                    'map': './src/articubot_one/config/my_map_save.yaml'}.items()
+                                    'map': './src/articubot_custom/config/my_map_save.yaml'}.items()
     )
     
     diff_drive_spawner = Node(

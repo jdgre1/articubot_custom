@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="articubot">
+
+    <xacro:include filename="$(find articubot_custom)/description/robot_core.xacro"/>
+    <xacro:include filename="$(find articubot_custom)/description/lidar.xacro"/>
+    <xacro:include filename="$(find articubot_custom)/description/face.xacro" />
+    <xacro:include filename="$(find articubot_custom)/description/camera.xacro" />
+    <xacro:include filename="$(find articubot_custom)/description/gazebo_control.xacro"/>
+
+</robot>
+
